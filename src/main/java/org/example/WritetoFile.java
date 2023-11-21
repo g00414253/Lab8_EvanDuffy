@@ -10,10 +10,12 @@ public class WritetoFile {
 
         try ( FileWriter writer = new FileWriter(filename)) {
             writer.write("Finally got this working");
+            writer.append("12345");
         }
         catch (IOException e){
             System.out.println("There was an issue with writing to file ");
             e.printStackTrace();
         }
+
     }
 }
